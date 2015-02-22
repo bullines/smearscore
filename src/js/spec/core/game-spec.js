@@ -1,10 +1,12 @@
 var Game = require('../../core/game');
 
 describe("Game", function() {
-  var gameInstance = new Game();
+    it("new games have no hands played", function() {
+        // arrange
+        var gameInstance = new Game();
+        var currentGameHands = gameInstance.hands;
 
-  it("stating something", function() {
-    var result = gameInstance.foo();
-    expect(result).toEqual('foo');
-  });
+        // assert
+        expect(currentGameHands).toEqual([]);
+    });
 });

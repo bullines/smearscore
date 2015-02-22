@@ -1,10 +1,7 @@
 "use strict";
 
 var Game = function() {
-};
-
-Game.prototype.foo = function(){
-    return "foo";
+    this.hands = [];
 };
 
 module.exports = Game;
