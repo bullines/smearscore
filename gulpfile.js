@@ -25,4 +25,5 @@ gulp.task('default', function() {
   // place code for your default task here
 });
 
-gulp.task('default', ['specs', 'lint']);
+gulp.task('default', ['specs']);
+// gulp.task('default', ['specs', 'lint']);

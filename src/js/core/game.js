@@ -1,7 +1,9 @@
 "use strict";
 
+var _cardSuits = require('./card-suits');
+
 var Game = function(gameOptions) {
-    this.hands = [];
+    this.turns = [];
     this.team1GamePoints = 0;
     this.team2GamePoints = 0;
     this.team1Score = 0;
@@ -11,6 +13,12 @@ var Game = function(gameOptions) {
     this.team2 = gameOptions.team2 || 'Team 2';
     this.gameType = gameOptions.gameType || '7';
     this.doCountForGame = gameOptions.doCountForGame || false;
+};
+
+Game.prototype.addTurn = function(turn) {
+    this.turns.push(turn);
+
+    return true;
 };
 
 module.exports = Game;
