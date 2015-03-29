@@ -21,4 +21,17 @@ describe("Game", function() {
         // assert
         expect(gameInstance.turns.length).toEqual(1);
     });
+
+    it ("adding a turn with values should have actual values", function () {
+        // arrange
+        var gameInstance = new Game({});
+        var aTurn = new Turn(CardSuits.hearts);
+        aTurn.bidScore = 4;
+        aTurn.bidTeam = 'Team 1';
+        gameInstance.addTurn(aTurn);
+
+        // assert
+        expect(gameInstance.turns[0].bidScore).toEqual(4);
+        expect(gameInstance.turns[0].bidTeam).toEqual('Team 1');
+    });
 });
