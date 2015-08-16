@@ -1,6 +1,8 @@
 var Game = require('../../core/game');
+var GameTypes = require('../../core/game-types');
 var CardSuits = require('../../core/card-suits');
 var Turn = require('../../core/turn');
+
 
 describe("Game", function() {
     it("new games have no turns played", function() {
@@ -34,4 +36,12 @@ describe("Game", function() {
         expect(gameInstance.turns[0].bidScore).toEqual(4);
         expect(gameInstance.turns[0].bidTeam).toEqual('Team 1');
     });
+
+    it("setting a new game's rules should stick", function() {
+        // arrange
+        var gameInstance = new Game({gameType: GameTypes.sevenPoint});
+
+        // assert
+        expect(gameInstance.gameRules.ruleName).toEqual("Seven Point");
+    });    
 });

@@ -18,13 +18,13 @@ Turn.prototype = function () {
     };
 
     var _applyGamePointsToScore = function () {
-
+        // TODO
     };
 
     return {
         setGamePoints: _setGamePoints,
-        team1GamePoints: function () {return _team1GamePoints;},
-        team2GamePoints: function () {return _team2GamePoints;}
+        team1GamePoints: function () { return _team1GamePoints; },
+        team2GamePoints: function () { return _team2GamePoints; }
     };
 }();
 

@@ -15,7 +15,7 @@ var Game = function(gameOptions) {
     this.team2 = gameOptions.team2 || 'Team 2';
     this.gameType = gameOptions.gameType || _gameTypes.sevenPoint;
     this.doCountForGame = gameOptions.doCountForGame || false;
-    //this.gameRules = _gameRulesFactory.generateGameRules();
+    this.gameRules = _gameRulesFactory.generateGameRules(this.gameType, this.doCountForGame);
 };
 
 Game.prototype.addTurn = function(turn) {
